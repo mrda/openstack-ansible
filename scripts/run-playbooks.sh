@@ -24,6 +24,7 @@ DEPLOY_INFRASTRUCTURE=${DEPLOY_INFRASTRUCTURE:-"yes"}
 DEPLOY_LOGGING=${DEPLOY_LOGGING:-"yes"}
 DEPLOY_OPENSTACK=${DEPLOY_OPENSTACK:-"yes"}
 DEPLOY_SWIFT=${DEPLOY_SWIFT:-"yes"}
+DEPLOY_IRONIC=${DEPLOY_IRONIC:-"yes"}
 DEPLOY_CEILOMETER=${DEPLOY_CEILOMETER:-"yes"}
 DEPLOY_TEMPEST=${DEPLOY_TEMPEST:-"yes"}
 COMMAND_LOGS=${COMMAND_LOGS:-"/openstack/log/ansible_cmd_logs/"}
@@ -179,6 +180,11 @@ pushd "playbooks"
     fi
     # install all of the swift Bits
     install_bits os-swift-install.yml
+  fi
+
+  if [ "${DEPLOY_IRONIC}" == "yes" ]; then
+    # install all of the ironic Bits
+    install_bits os-ironic-install.yml
   fi
 
   if [ "${DEPLOY_TEMPEST}" == "yes" ]; then
