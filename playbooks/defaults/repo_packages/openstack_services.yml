@@ -105,3 +105,14 @@ nova_git_dest: "/opt/nova_{{ nova_git_install_branch | replace('/', '_') }}"
 swift_git_repo: https://git.openstack.org/openstack/swift
 swift_git_install_branch: 4db7e2e2e4d80757a717485e3b639b16e0a66f68 # HEAD of "master" as of 17.01.2016
 swift_git_dest: "/opt/swift_{{ swift_git_install_branch | replace('/', '_') }}"
+
+## ironic service
+ironic_git_repo: https://git.openstack.org/openstack/ironic
+ironic_git_install_branch: c6e8e2a33c65b6269a0b1b4f5e63620c68bdc3fb  # HEAD sha as of 13 Nov 2015
+ironic_git_dest: "/opt/ironic_{{ ironic_git_install_branch | replace('/', '_') }}"
+
+## python-ironicclient
+python_ironicclient_git_repo: https://git.openstack.org/openstack/python-ironicclient
+python_ironicclient_git_install_branch: b66f5e8dd60c023d6d216c3bbc5ec22d837623c3  # HEAD sha as of 13 Nov 2015
+python_ironicclient_git_dest: "/opt/python-ironicclient_{{ python_ironicclient_git_install_branch | replace('/', '_') }}"
+
