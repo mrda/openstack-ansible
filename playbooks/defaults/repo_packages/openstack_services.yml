@@ -108,11 +108,11 @@ swift_git_dest: "/opt/swift_{{ swift_git_install_branch | replace('/', '_') }}"
 
 ## ironic service
 ironic_git_repo: https://git.openstack.org/openstack/ironic
-ironic_git_install_branch: c6e8e2a33c65b6269a0b1b4f5e63620c68bdc3fb  # HEAD sha as of 13 Nov 2015
+ironic_git_install_branch: 22402e4586db3f1148079502f2a9ab2dd6f7d3e8  # HEAD sha as of 22 Jan 2016
 ironic_git_dest: "/opt/ironic_{{ ironic_git_install_branch | replace('/', '_') }}"
 
 ## python-ironicclient
 python_ironicclient_git_repo: https://git.openstack.org/openstack/python-ironicclient
-python_ironicclient_git_install_branch: b66f5e8dd60c023d6d216c3bbc5ec22d837623c3  # HEAD sha as of 13 Nov 2015
+python_ironicclient_git_install_branch: ff1ab4c5f2410be60a0a5191679a2baa34e1b77d  # HEAD sha as of 22 Jan 2016
 python_ironicclient_git_dest: "/opt/python-ironicclient_{{ python_ironicclient_git_install_branch | replace('/', '_') }}"
 
