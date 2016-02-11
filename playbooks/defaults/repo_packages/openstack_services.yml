@@ -64,6 +64,10 @@ horizon_git_repo: https://git.openstack.org/openstack/horizon
 horizon_git_install_branch: aa068eca807885182886b2a2f28591d6ac9e689e # HEAD of "master" as of 24.10.2015
 horizon_git_dest: "/opt/horizon_{{ horizon_git_install_branch | replace('/', '_') }}"
 
+## Ironic service
+ironic_git_repo: https://git.openstack.org/openstack/ironic
+ironic_git_install_branch: c6e8e2a33c65b6269a0b1b4f5e63620c68bdc3fb # HEAD of "master" as of 19.01.2016
+ironic_git_dest: "/opt/ironic_{{ ironic_git_install_branch | replace('/', '_') }}"
 
 ## Keystone service
 keystone_git_repo: https://git.openstack.org/openstack/keystone

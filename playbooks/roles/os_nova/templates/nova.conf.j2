@@ -48,6 +48,10 @@ scheduler_host_subset_size = {{ nova_scheduler_host_subset_size }}
 scheduler_manager = {{ nova_scheduler_manager }}
 scheduler_max_attempts = {{ nova_scheduler_max_attempts }}
 scheduler_weight_classes = {{ nova_scheduler_weight_classes }}
+# Ironic things
+scheduler_use_baremetal_filters = True
+scheduler_tracks_instance_changes = False
+
 
 # Compute
 enable_instance_password = {{ nova_enable_instance_password }}
@@ -58,6 +62,8 @@ api_paste_config = /etc/nova/api-paste.ini
 allow_resize_to_same_host = True
 image_cache_manager_interval = {{ nova_image_cache_manager_interval }}
 resume_guests_state_on_host_boot = {{ nova_resume_guests_state_on_host_boot }}
+# Ironic things
+compute_manager = ironic.nova.compute.manager.ClusteredComputeManager
 
 # Api's
 enabled_apis = {{ nova_enabled_apis }}

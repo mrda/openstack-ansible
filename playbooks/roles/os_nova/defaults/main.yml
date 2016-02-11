@@ -167,6 +167,16 @@ nova_image_cache_manager_interval: 0
 nova_resume_guests_state_on_host_boot: False
 nova_dhcp_domain: novalocal
 
+## Ironic stuff mrda
+nova_compute_driver: nova.virt.ironic.IronicDriver
+nova_firewall_driver: nova.virt.firewall.NoopFirewallDriver
+nova_scheduler_host_manager: nova.scheduler.ironic_host_manager.IronicHostManager
+nova_ram_allocation_ratio: 1.0
+nova_reserved_host_memory_mb: 0
+#TBD compute_manager: ironic.nova.compute.manager.ClusteredComputeManager
+#TBD scheduler_use_baremetal_filters=True
+#TBD scheduler_tracks_instance_changes=False
+
 # Nova quota
 nova_quota_cores: 20
 nova_quota_fixed_ips: -1
