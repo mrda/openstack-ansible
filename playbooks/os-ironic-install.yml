@@ -101,7 +101,7 @@
       set_fact:
         rabbitmq_servers: "{{ servers.sorted_list }}"
   roles:
-    - role: "os_ironic"
+    - role: "openstack-ansible-ironic"
       ironic_venv_tag: "{{ openstack_release }}"
       ironic_venv_download_url: "{{ openstack_repo_url }}/venvs/{{ openstack_release }}/{{ ansible_distribution | lower }}/ironic-{{ openstack_release }}.tgz"
       tags:
