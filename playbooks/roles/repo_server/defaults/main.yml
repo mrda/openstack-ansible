@@ -45,6 +45,7 @@ repo_apt_packages:
   - fcgiwrap
   - git-core
   - iptables
+  - libjpeg-dev
   - lsyncd
   - lynx
   - nginx-extras
