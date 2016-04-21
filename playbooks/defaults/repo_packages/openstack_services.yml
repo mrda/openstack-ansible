@@ -31,7 +31,7 @@
 
 ## Global Requirements
 requirements_git_repo: https://git.openstack.org/openstack/requirements
-requirements_git_install_branch: cde18847f5b7a56257d2a5121f213533e2a305fb # HEAD of "master" as of 21.04.2016
+requirements_git_install_branch: 9dcf0dd84680f157de4226f104b58b1bccd50476 # HEAD of "stable/liberty" as of 21.04.2016
 requirements_git_dest: "/opt/requirements_{{ requirements_git_install_branch | replace('/', '_') }}"
 
 
@@ -106,8 +106,8 @@ swift_git_repo: https://git.openstack.org/openstack/swift
 swift_git_install_branch: 8c1976aa771f8c43c5dbe676bd9a5efc69f09eae # HEAD of "stable/liberty" as of 24.03.2016
 swift_git_dest: "/opt/swift_{{ swift_git_install_branch | replace('/', '_') }}"
 
-
 ## Ironic service
 ironic_git_repo: https://git.openstack.org/openstack/ironic
-ironic_git_install_branch: 8d105f60790ce108f65de90fc68e6e8651a87b4d # HEAD of "stable/mitaka" as of 23.03.2016
+ironic_git_install_branch: ee5a245806446caa8a1650bf2b945777fd74b786 # HEAD of "stable/liberty" as of 21.04.2016
 ironic_git_dest: "/opt/ironic_{{ ironic_git_install_branch | replace('/', '_') }}"
+
