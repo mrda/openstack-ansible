@@ -31,7 +31,7 @@
 
 ## Global Requirements
 requirements_git_repo: https://git.openstack.org/openstack/requirements
-requirements_git_install_branch: f8579e166f45f6a580ef56cd3c0e734c03ae2f76 # HEAD of "stable/liberty" as of 24.03.2016
+requirements_git_install_branch: cde18847f5b7a56257d2a5121f213533e2a305fb # HEAD of "master" as of 21.04.2016
 requirements_git_dest: "/opt/requirements_{{ requirements_git_install_branch | replace('/', '_') }}"
 
 
