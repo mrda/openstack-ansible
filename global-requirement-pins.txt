@@ -1,3 +1,5 @@
 # This file was created to set pins that are needed but should not be
 #  installed as base requirements
 pylxd<=0.19
+oslo.config>=2.7.0      # python-openstackclient
+debtcollector>=1.2.0    # python-openstackclient
