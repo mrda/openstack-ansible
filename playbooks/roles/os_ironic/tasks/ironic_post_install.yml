@@ -57,10 +57,10 @@
   shell: |
     . ~/openrc
     {{ ironic_bin }}/swift \
-        --os-username "service:{{ glance_service_user_name }}" \
+        --os-username {{ glance_service_user_name }} \
         --os-password {{ glance_service_password }} \
+        --os-project-name {{ glance_service_project_name }} \
         --os-auth-url {{ keystone_service_internalurl }} \
-        --os-identity-api-version {{ keystone_service_internalurl.split('/v')[-1] }} \
         post -m temp-url-key:{{ ironic_swift_temp_url_secret_key }}
   when:
     - inventory_hostname == groups['ironic_all'][0]
@@ -73,10 +73,10 @@
   shell: |
     . ~/openrc
     {{ ironic_bin }}/swift \
-        --os-username "service:{{ glance_service_user_name }}" \
+        --os-username {{ glance_service_user_name }} \
         --os-password {{ glance_service_password }} \
+        --os-project-name {{ glance_service_project_name }} \
         --os-auth-url {{ keystone_service_internalurl }} \
-        --os-identity-api-version {{ keystone_service_internalurl.split('/v')[-1] }} \
         stat -v | awk '/StorageURL\:/ {print $2}'
   register: swift_storage_url
   when:
